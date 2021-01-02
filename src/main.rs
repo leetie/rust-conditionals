@@ -1,6 +1,10 @@
+use console::Term;
 use std::io;
 
 fn main() {
+    println!("test");
+    let term = Term::stdout();
+    term.clear_screen().expect("failed to clear");
     loop {
         println!("Input number");
         let mut number = String::new();
